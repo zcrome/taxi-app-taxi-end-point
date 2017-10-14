@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		49840B9AF364089E5AC56A93 /* Pods_taxi_app_taxi_end_point.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25712CA63EC9FF230773AFDF /* Pods_taxi_app_taxi_end_point.framework */; };
 		D290C03A1F92C039002BEEB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290C0391F92C039002BEEB6 /* AppDelegate.swift */; };
-		D290C03C1F92C039002BEEB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290C03B1F92C039002BEEB6 /* ViewController.swift */; };
-		D290C03F1F92C039002BEEB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290C03D1F92C039002BEEB6 /* Main.storyboard */; };
 		D290C0411F92C039002BEEB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D290C0401F92C039002BEEB6 /* Assets.xcassets */; };
-		D290C0441F92C039002BEEB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290C0421F92C039002BEEB6 /* LaunchScreen.storyboard */; };
+		D290C0701F92C581002BEEB6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290C06C1F92C327002BEEB6 /* Login.storyboard */; };
+		D290C0711F92C593002BEEB6 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290C06D1F92C327002BEEB6 /* Register.storyboard */; };
+		D290C0721F92C59B002BEEB6 /* Launcher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290C06B1F92C327002BEEB6 /* Launcher.storyboard */; };
+		D290C0731F92C59E002BEEB6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290C06A1F92C327002BEEB6 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +22,15 @@
 		AEEBD02B86846543F8654E2F /* Pods-taxi-app-taxi-end-point.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taxi-app-taxi-end-point.debug.xcconfig"; path = "Pods/Target Support Files/Pods-taxi-app-taxi-end-point/Pods-taxi-app-taxi-end-point.debug.xcconfig"; sourceTree = "<group>"; };
 		D290C0361F92C039002BEEB6 /* taxi-app-taxi-end-point.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "taxi-app-taxi-end-point.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D290C0391F92C039002BEEB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D290C03B1F92C039002BEEB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D290C03E1F92C039002BEEB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D290C0401F92C039002BEEB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D290C0431F92C039002BEEB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D290C0451F92C039002BEEB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D290C0641F92C327002BEEB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D290C0661F92C327002BEEB6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D290C0681F92C327002BEEB6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D290C06A1F92C327002BEEB6 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D290C06B1F92C327002BEEB6 /* Launcher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launcher.storyboard; sourceTree = "<group>"; };
+		D290C06C1F92C327002BEEB6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D290C06D1F92C327002BEEB6 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,15 +83,59 @@
 		D290C0381F92C039002BEEB6 /* taxi-app-taxi-end-point */ = {
 			isa = PBXGroup;
 			children = (
+				D290C0621F92C327002BEEB6 /* Controllers */,
+				D290C0691F92C327002BEEB6 /* Storyboards */,
 				D290C0391F92C039002BEEB6 /* AppDelegate.swift */,
-				D290C03B1F92C039002BEEB6 /* ViewController.swift */,
-				D290C03D1F92C039002BEEB6 /* Main.storyboard */,
 				D290C0401F92C039002BEEB6 /* Assets.xcassets */,
-				D290C0421F92C039002BEEB6 /* LaunchScreen.storyboard */,
 				D290C0451F92C039002BEEB6 /* Info.plist */,
 			);
 			path = "taxi-app-taxi-end-point";
 			sourceTree = "<group>";
+		};
+		D290C0621F92C327002BEEB6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D290C0631F92C327002BEEB6 /* Home */,
+				D290C0651F92C327002BEEB6 /* Login */,
+				D290C0671F92C327002BEEB6 /* Register */,
+			);
+			path = Controllers;
+			sourceTree = SOURCE_ROOT;
+		};
+		D290C0631F92C327002BEEB6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D290C0641F92C327002BEEB6 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D290C0651F92C327002BEEB6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D290C0661F92C327002BEEB6 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D290C0671F92C327002BEEB6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D290C0681F92C327002BEEB6 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D290C0691F92C327002BEEB6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D290C06A1F92C327002BEEB6 /* Home.storyboard */,
+				D290C06B1F92C327002BEEB6 /* Launcher.storyboard */,
+				D290C06C1F92C327002BEEB6 /* Login.storyboard */,
+				D290C06D1F92C327002BEEB6 /* Register.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -150,9 +199,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D290C0441F92C039002BEEB6 /* LaunchScreen.storyboard in Resources */,
 				D290C0411F92C039002BEEB6 /* Assets.xcassets in Resources */,
-				D290C03F1F92C039002BEEB6 /* Main.storyboard in Resources */,
+				D290C0701F92C581002BEEB6 /* Login.storyboard in Resources */,
+				D290C0731F92C59E002BEEB6 /* Home.storyboard in Resources */,
+				D290C0721F92C59B002BEEB6 /* Launcher.storyboard in Resources */,
+				D290C0711F92C593002BEEB6 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,31 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D290C03C1F92C039002BEEB6 /* ViewController.swift in Sources */,
 				D290C03A1F92C039002BEEB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D290C03D1F92C039002BEEB6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D290C03E1F92C039002BEEB6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D290C0421F92C039002BEEB6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D290C0431F92C039002BEEB6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D290C0461F92C039002BEEB6 /* Debug */ = {
