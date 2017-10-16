@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="5a8-YE-raS">
             <objects>
-                <viewController id="YUJ-w5-0Dn" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="YUJ-w5-0Dn" customClass="LoginViewController" customModule="taxi_app_taxi_end_point" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8pb-tC-0e2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,12 +21,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JgR-8x-jMT">
                                 <rect key="frame" x="56.5" y="183.5" width="262.5" height="180"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GBr-oS-nDv">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="test@test.com" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GBr-oS-nDv">
                                         <rect key="frame" x="0.0" y="0.0" width="262.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-8t-CpR">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-8t-CpR">
                                         <rect key="frame" x="0.0" y="50" width="262.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -35,14 +35,14 @@
                                         <rect key="frame" x="0.0" y="100" width="262.5" height="30"/>
                                         <state key="normal" title="Ingresar"/>
                                         <connections>
-                                            <segue destination="uZu-OD-dfY" kind="show" id="0yF-RO-imZ"/>
+                                            <action selector="executeLogin:" destination="YUJ-w5-0Dn" eventType="touchUpInside" id="T5N-CN-v1F"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnS-Ei-EY8">
                                         <rect key="frame" x="0.0" y="150" width="262.5" height="30"/>
                                         <state key="normal" title="Registrarme"/>
                                         <connections>
-                                            <segue destination="OrC-Px-1AF" kind="show" id="tdZ-ca-yE8"/>
+                                            <segue destination="OrC-Px-1AF" kind="show" id="97C-2o-U9a"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -64,25 +64,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JaY-s5-QSH"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="GBr-oS-nDv" id="Gw1-fe-a9Z"/>
+                        <outlet property="passwordTextField" destination="OgZ-8t-CpR" id="UWa-np-cxg"/>
+                        <segue destination="uZu-OD-dfY" kind="show" identifier="toHome" id="VI9-DH-A62"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7q6-AV-Kfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-114.40000000000001" y="78.710644677661179"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vtC-CB-Joj">
-            <objects>
-                <viewController id="RVi-7C-Wpc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="obX-BG-Qmo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="IDq-GJ-5lt"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fUk-Rw-9va" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="738" y="-375"/>
         </scene>
         <!--Home-->
         <scene sceneID="V4a-Yh-64C">
@@ -98,7 +88,7 @@
                 <viewControllerPlaceholder storyboardName="Register" id="OrC-Px-1AF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaV-1a-8cM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="262"/>
+            <point key="canvasLocation" x="577" y="243"/>
         </scene>
     </scenes>
 </document>

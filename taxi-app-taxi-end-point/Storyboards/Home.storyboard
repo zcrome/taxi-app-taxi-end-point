@@ -45,7 +45,7 @@
         <!--Home View Controller-->
         <scene sceneID="bnm-RB-ZIY">
             <objects>
-                <tabBarController id="bdj-qJ-7Of" customClass="HomeViewController" customModule="taxi_app_client_end_point" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeViewController" id="bdj-qJ-7Of" customClass="HomeViewController" customModule="taxi_app_taxi_end_point" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uZC-pQ-wOP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

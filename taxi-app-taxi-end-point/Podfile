@@ -6,5 +6,6 @@ target 'taxi-app-taxi-end-point' do
   use_frameworks!
 
   # Pods for taxi-app-taxi-end-point
-
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
 end

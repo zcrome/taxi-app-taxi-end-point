@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,21 +17,21 @@
                 <viewControllerPlaceholder storyboardName="Login" id="Cfu-XA-jY0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKY-m9-Acd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="88"/>
+            <point key="canvasLocation" x="794" y="32"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="jpv-pj-KQ5">
             <objects>
-                <viewController id="8k2-3e-0hs" customClass="RegisterViewController" customModule="taxi_app_client_end_point" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8k2-3e-0hs" customClass="RegisterViewController" customModule="taxi_app_taxi_end_point" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vkl-sV-Hfu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8w-2f-dYR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQJ-je-wjM">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrarme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xro-OO-mQD">
                                                 <rect key="frame" x="40" y="96" width="171.5" height="40"/>
@@ -42,73 +43,67 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="PGH-dC-P1g">
-                                                <rect key="frame" x="38" y="185" width="300" height="830"/>
+                                                <rect key="frame" x="38" y="185" width="300" height="750"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="código" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxR-Ei-r2A">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="123123" borderStyle="roundedRect" placeholder="código" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xxR-Ei-r2A">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DNI" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SWy-RN-YHp">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="12345678" borderStyle="roundedRect" placeholder="DNI" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="SWy-RN-YHp">
                                                         <rect key="frame" x="0.0" y="80" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombres" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oxQ-VQ-2LR">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="jon" borderStyle="roundedRect" placeholder="Nombres" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="oxQ-VQ-2LR">
                                                         <rect key="frame" x="0.0" y="160" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kdf-L2-cmm">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="hopkins" borderStyle="roundedRect" placeholder="Apellidos" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="kdf-L2-cmm">
                                                         <rect key="frame" x="0.0" y="240" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="direccion" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMJ-fu-S4U">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="AV. del aire 123" borderStyle="roundedRect" placeholder="direccion" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="UMJ-fu-S4U">
                                                         <rect key="frame" x="0.0" y="320" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre Vehiculo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xsB-br-bI5">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Chvrolet Corsa" borderStyle="roundedRect" placeholder="Nombre Vehiculo" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xsB-br-bI5">
                                                         <rect key="frame" x="0.0" y="400" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placa" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anr-db-hVs">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="ABC-001" borderStyle="roundedRect" placeholder="Placa" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="anr-db-hVs">
                                                         <rect key="frame" x="0.0" y="480" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Celular" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOt-TB-Nx3">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="123456789" borderStyle="roundedRect" placeholder="Celular" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="FOt-TB-Nx3">
                                                         <rect key="frame" x="0.0" y="560" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tza-qr-sr7">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="1test@test.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="tza-qr-sr7">
                                                         <rect key="frame" x="0.0" y="640" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVv-yh-kfS">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="test" borderStyle="roundedRect" placeholder="contraseña" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xVv-yh-kfS">
                                                         <rect key="frame" x="0.0" y="720" width="300" height="30"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repita contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wDe-LP-f3W">
-                                                        <rect key="frame" x="0.0" y="800" width="300" height="30"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -119,11 +114,11 @@
                                                 </constraints>
                                                 <state key="normal" title="volver"/>
                                                 <connections>
-                                                    <segue destination="Cfu-XA-jY0" kind="show" id="5o3-oZ-kXG"/>
+                                                    <segue destination="Cfu-XA-jY0" kind="show" id="Rjo-jw-dvy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCz-RV-PWb">
-                                                <rect key="frame" x="30" y="1130" width="315" height="40"/>
+                                                <rect key="frame" x="30" y="1050" width="315" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Uub-KE-zY3"/>
@@ -132,7 +127,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Cfu-XA-jY0" kind="show" id="x0P-jW-TIV"/>
+                                                    <action selector="executeRegister:" destination="8k2-3e-0hs" eventType="touchUpInside" id="fRG-qb-5fu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -171,7 +166,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RFq-dM-eYR"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1200"/>
+                    <size key="freeformSize" width="375" height="1150"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="UMJ-fu-S4U" id="JTj-Nd-sLD"/>
+                        <outlet property="carModelNameTextField" destination="xsB-br-bI5" id="FbU-5v-czF"/>
+                        <outlet property="codeTextField" destination="xxR-Ei-r2A" id="qK7-JA-RJn"/>
+                        <outlet property="dniTextField" destination="SWy-RN-YHp" id="vR8-li-nMp"/>
+                        <outlet property="emailTextField" destination="tza-qr-sr7" id="YYz-9G-WDk"/>
+                        <outlet property="lastNameTextField" destination="kdf-L2-cmm" id="GHY-I7-UDs"/>
+                        <outlet property="licensePlateTextField" destination="anr-db-hVs" id="gUt-mi-2Hw"/>
+                        <outlet property="nameTextField" destination="oxQ-VQ-2LR" id="RSz-Ig-CYI"/>
+                        <outlet property="passwordTextField" destination="xVv-yh-kfS" id="7I6-U2-9gQ"/>
+                        <outlet property="phoneTextField" destination="FOt-TB-Nx3" id="hk1-OF-DNC"/>
+                        <segue destination="Cfu-XA-jY0" kind="show" identifier="toLoginAfterRegister" id="AsN-Nz-WKd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0m-ma-jwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,6 +187,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5o3-oZ-kXG"/>
+        <segue reference="AsN-Nz-WKd"/>
     </inferredMetricsTieBreakers>
 </document>
