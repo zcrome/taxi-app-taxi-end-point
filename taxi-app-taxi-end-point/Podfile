@@ -8,4 +8,5 @@ target 'taxi-app-taxi-end-point' do
   # Pods for taxi-app-taxi-end-point
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
+  pod 'Socket.IO-Client-Swift'
 end

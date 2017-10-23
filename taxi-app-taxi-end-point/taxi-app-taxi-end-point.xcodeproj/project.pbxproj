@@ -21,6 +21,9 @@
 		D2B865B51F94083700A2A7F2 /* TypeOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B865B41F94083700A2A7F2 /* TypeOfUser.swift */; };
 		D2B865B71F9425C700A2A7F2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B865B61F9425C700A2A7F2 /* Session.swift */; };
 		D2B865B91F9425E800A2A7F2 /* Taxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B865B81F9425E800A2A7F2 /* Taxi.swift */; };
+		D2E56ECF1F9C13B0007A2598 /* SocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E56ECE1F9C13B0007A2598 /* SocketClient.swift */; };
+		D2E56ED11F9D700D007A2598 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E56ED01F9D700D007A2598 /* ConnectionStatus.swift */; };
+		D2E56ED31F9D7832007A2598 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E56ED21F9D7832007A2598 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		D2B865B41F94083700A2A7F2 /* TypeOfUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfUser.swift; sourceTree = "<group>"; };
 		D2B865B61F9425C700A2A7F2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		D2B865B81F9425E800A2A7F2 /* Taxi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taxi.swift; sourceTree = "<group>"; };
+		D2E56ECE1F9C13B0007A2598 /* SocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClient.swift; sourceTree = "<group>"; };
+		D2E56ED01F9D700D007A2598 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
+		D2E56ED21F9D7832007A2598 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E56ED31F9D7832007A2598 /* CoreLocation.framework in Frameworks */,
 				49840B9AF364089E5AC56A93 /* Pods_taxi_app_taxi_end_point.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +75,7 @@
 		9B3130AD405E99F8892D2ED8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2E56ED21F9D7832007A2598 /* CoreLocation.framework */,
 				25712CA63EC9FF230773AFDF /* Pods_taxi_app_taxi_end_point.framework */,
 			);
 			name = Frameworks;
@@ -77,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				D217CBA11F94006100BBBE82 /* Services.swift */,
+				D2E56ECE1F9C13B0007A2598 /* SocketClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -87,6 +96,7 @@
 				D2B865B41F94083700A2A7F2 /* TypeOfUser.swift */,
 				D2B865B61F9425C700A2A7F2 /* Session.swift */,
 				D2B865B81F9425E800A2A7F2 /* Taxi.swift */,
+				D2E56ED01F9D700D007A2598 /* ConnectionStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,10 +304,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2B865B71F9425C700A2A7F2 /* Session.swift in Sources */,
+				D2E56ED11F9D700D007A2598 /* ConnectionStatus.swift in Sources */,
 				D2B865B31F94060600A2A7F2 /* HomeViewController.swift in Sources */,
 				D2B865B51F94083700A2A7F2 /* TypeOfUser.swift in Sources */,
 				D2B865B91F9425E800A2A7F2 /* Taxi.swift in Sources */,
 				D2B865B11F9405FE00A2A7F2 /* LoginViewController.swift in Sources */,
+				D2E56ECF1F9C13B0007A2598 /* SocketClient.swift in Sources */,
 				D290C03A1F92C039002BEEB6 /* AppDelegate.swift in Sources */,
 				D217CBA21F94006100BBBE82 /* Services.swift in Sources */,
 				D2B865B21F94060200A2A7F2 /* RegisterViewController.swift in Sources */,

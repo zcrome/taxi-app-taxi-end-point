@@ -8,14 +8,18 @@
 
 import Foundation
 import SwiftyJSON
+import CoreLocation
 
 class Session{
   static let sharedInstance = Session()
-  private init(){}
+  private init(){
+  }
   
   var taxi: Taxi?
   var token: String?
-  
+  var messageToUser = ""
+  var connectionStatus: ConnectionStatus = .disconnected
+  var isAllowToSendCurrentLocation = false
   
   
   func setTokenWith(JSON json: JSON)->Bool{
@@ -25,14 +29,11 @@ class Session{
     }
     return false
   }
-  
-  
-  
   func executeLogout(){
     taxi = nil
     token = nil
   }
   
-  
-  
 }
+
+
