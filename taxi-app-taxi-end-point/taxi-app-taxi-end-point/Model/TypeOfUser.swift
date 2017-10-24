@@ -8,15 +8,12 @@
 
 import Foundation
 
-enum TypeOfUser{
-  case taxi
-  case client
+enum TypeOfUser: String{
+  case taxi = "TAXI"
+  case client = "CLIENT"
 }
 
 
 protocol TypeOfUserProtocol{
-  
   var typeUseIs: TypeOfUser { get }
-  
-  
 }

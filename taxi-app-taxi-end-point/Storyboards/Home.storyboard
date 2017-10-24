@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Configuración-->
         <scene sceneID="2vN-zn-XJ4">
             <objects>
-                <viewController id="vWN-yb-1Oy" sceneMemberID="viewController">
+                <viewController id="vWN-yb-1Oy" customClass="ConfigurationViewController" customModule="taxi_app_taxi_end_point" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ykl-OF-RBB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,16 +99,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QGg-3v-oGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="wqv-8B-RdD"/>
+                    <tabBarItem key="tabBarItem" title="Configuración" id="wqv-8B-RdD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZm-p1-pLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1637" y="519"/>
         </scene>
-        <!--Item 1-->
+        <!--Taxistas-->
         <scene sceneID="Ijl-HP-R8W">
             <objects>
-                <viewController id="WlU-bU-cBr" sceneMemberID="viewController">
+                <viewController id="WlU-bU-cBr" customClass="TaxisViewController" customModule="taxi_app_taxi_end_point" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v9W-8K-RZB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,6 +134,36 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ecI-dg-GlC">
                                 <rect key="frame" x="20" y="193" width="280" height="306"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="taxiCell" textLabel="bsf-Gq-ZZy" detailTextLabel="i4N-T6-dBc" style="IBUITableViewCellStyleSubtitle" id="WWb-ZB-XsG">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WWb-ZB-XsG" id="nCu-KH-vq3">
+                                            <rect key="frame" x="0.0" y="0.0" width="241" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bsf-Gq-ZZy">
+                                                    <rect key="frame" x="15" y="6" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i4N-T6-dBc">
+                                                    <rect key="frame" x="15" y="26.5" width="28" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WlU-bU-cBr" id="Yrv-5N-hoV"/>
+                                    <outlet property="delegate" destination="WlU-bU-cBr" id="I6Y-U4-nXV"/>
+                                </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Nm-ZT-ey5">
                                 <rect key="frame" x="20" y="145" width="280" height="34"/>
@@ -141,13 +171,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDb-UO-Bt0">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="17"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ESTADO ACTUAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N07-ob-egA">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ESTADO ACTUAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N07-ob-egA">
                                                 <rect key="frame" x="0.0" y="0.0" width="229.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ACTIVO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1A-do-lE8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTIVO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1A-do-lE8">
                                                 <rect key="frame" x="229.5" y="0.0" width="50.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -158,13 +188,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6u-Mi-reR">
                                         <rect key="frame" x="0.0" y="17" width="280" height="17"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TAXISTAS CONECTADOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghl-3a-huX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAXISTAS CONECTADOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghl-3a-huX">
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="17"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49W-KX-0pJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49W-KX-0pJ">
                                                 <rect key="frame" x="172" y="0.0" width="108" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -193,16 +223,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WaY-SA-QAc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="3zg-D5-hpA"/>
+                    <tabBarItem key="tabBarItem" title="Taxistas" id="3zg-D5-hpA"/>
+                    <connections>
+                        <outlet property="currentCoordinatesLabel" destination="UWB-ON-gPv" id="hbo-CR-tFc"/>
+                        <outlet property="currentStateLabel" destination="N1A-do-lE8" id="gQk-ex-X5t"/>
+                        <outlet property="currentTaxisOnlineLabel" destination="49W-KX-0pJ" id="Kmu-Dg-dQl"/>
+                        <outlet property="taxisTableView" destination="ecI-dg-GlC" id="Ml9-Ca-5I4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEP-KP-gtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="130"/>
+            <point key="canvasLocation" x="656" y="96"/>
         </scene>
-        <!--Item-->
+        <!--Carrera Actual-->
         <scene sceneID="JgC-5p-hwS">
             <objects>
-                <viewController id="7N2-Rd-Ngb" sceneMemberID="viewController">
+                <viewController id="7N2-Rd-Ngb" customClass="CurrentTripViewController" customModule="taxi_app_taxi_end_point" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6iO-Mb-iJ1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,16 +310,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="9VS-eD-aHi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9yi-CG-Dby"/>
+                    <tabBarItem key="tabBarItem" title="Carrera Actual" id="9yi-CG-Dby"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gw-LJ-gY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="1517.9577464788733"/>
+            <point key="canvasLocation" x="624" y="1712"/>
         </scene>
-        <!--Item-->
+        <!--Clientes-->
         <scene sceneID="E5O-N6-yY1">
             <objects>
-                <viewController id="u2U-Ep-8Q9" sceneMemberID="viewController">
+                <viewController id="u2U-Ep-8Q9" customClass="ClientsViewController" customModule="taxi_app_taxi_end_point" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fYh-R9-Fhm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,11 +347,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hZr-YG-Z4p"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0km-kB-bgM"/>
+                    <tabBarItem key="tabBarItem" title="Clientes" id="0km-kB-bgM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bC7-RZ-NBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637" y="1199"/>
+            <point key="canvasLocation" x="1637" y="1326"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="bnm-RB-ZIY">
@@ -335,7 +371,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PM-LC-mE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="832"/>
+            <point key="canvasLocation" x="-135" y="821"/>
         </scene>
     </scenes>
 </document>

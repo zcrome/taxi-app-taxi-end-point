@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum ConnectionStatus {
-  case connected
-  case disconnected
-  case tryingToConnect
+enum ConnectionStatus: String {
+  case connected = "CONECTADO"
+  case disconnected = "DESCONECTADO"
+  case tryingToConnect = "INTENTANDO CONECTAR"
 }

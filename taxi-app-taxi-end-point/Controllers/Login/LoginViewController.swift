@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreLocation
+
 
 class LoginViewController: UIViewController {
   
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
   //**************************************
   //**** MARK: - Local constans and variables
   //**************************************
-  let locationManager = CLLocationManager()
+  
   
   
   //**************************************
@@ -37,9 +37,6 @@ class LoginViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-//    var locationManager : CLLocationManager = CLLocationManager()
-//    locationManager.delegate = self
-//    locationManager.requestAlwaysAuthorization()
     
   }
   
@@ -57,17 +54,6 @@ class LoginViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     
-    // Ask for Authorisation from the User.
-    self.locationManager.requestAlwaysAuthorization()
-    
-    // For use in foreground
-    self.locationManager.requestWhenInUseAuthorization()
-    
-    if CLLocationManager.locationServicesEnabled() {
-      locationManager.delegate = self
-      locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-      locationManager.startUpdatingLocation()
-    }
     
   }
   
@@ -76,40 +62,24 @@ class LoginViewController: UIViewController {
   //**************************************
   
   @IBAction func executeLogin(_ sender: UIButton) {
-//    guard let email = emailTextField.text, let password = passwordTextField.text, !email.isEmpty, !password.isEmpty else{
-//      print("show message")
-//      return
-//    }
-//    Services.sharedInstance.executeTaxiLoginWith(Credentials: ["email": email, "password": password]) { isLoginSuccess in
-//      if isLoginSuccess {
-//        self.performSegue(withIdentifier: "toHome", sender: self)
-//      }else{
-//        print("WRONG")
-//      }
-//    }
-    
-    SocketClient.share.executeConnection()
+    guard let email = emailTextField.text, let password = passwordTextField.text, !email.isEmpty, !password.isEmpty else{
+      showAlert(message: "Ingrese todos los campos")
+      return
+    }
+    Services.sharedInstance.executeTaxiLoginWith(Credentials: ["email": email, "password": password]) { isLoginSuccess in
+      if isLoginSuccess {
+        self.performSegue(withIdentifier: "toHome", sender: self)
+      }else{
+        self.showAlert(message: "Servicio no disponible")
+      }
+    }
   }
-  
-  @IBAction func dwdwdwdw(_ sender: Any) {
-    
-    SocketClient.share.executeDisconnection()
-  }
-  
   //**************************************
   //**** MARK: - Additional functions that may be require
   //**************************************
   
 }
 
-extension LoginViewController: CLLocationManagerDelegate{
-  
-  
-  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    var locValue:CLLocationCoordinate2D = manager.location!.coordinate
-    print("locations = \(locValue.latitude) \(locValue.longitude)")
-  }
-  
-}
+
 
 

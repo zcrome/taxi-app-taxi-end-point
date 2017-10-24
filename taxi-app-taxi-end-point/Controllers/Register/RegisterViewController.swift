@@ -67,7 +67,7 @@ class RegisterViewController: UIViewController {
     
     guard let code = codeTextField.text,
       let dni = dniTextField.text,
-      let name = dniTextField.text,
+      let name = nameTextField.text,
       let lastName = lastNameTextField.text,
       let address = addressTextField.text,
       let carModel = carModelNameTextField.text,
@@ -95,7 +95,7 @@ class RegisterViewController: UIViewController {
       if response.status, let _ = response.taxiId{
         self.performSegue(withIdentifier: "toLoginAfterRegister", sender: self)
       }else{
-        print("ERROR register")
+        self.showAlert(message: "No se pudo crear usuario. Intente con otro email.")
       }
     }
   }

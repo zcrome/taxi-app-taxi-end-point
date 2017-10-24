@@ -18,16 +18,19 @@ class SocketClient{
   
   func executeConnection(){
     socket.on(clientEvent: .connect) {data, ack in
-      print("CLIENT=")
+      print("***********")
+      print("STARTING CONNECTION")
     }
     socket.on("who-are-you") {data, ack in
-      self.socket.emit("token-Registration", ["type":  "TAXI"])
+      self.socket.emit("token-Registration", ["type":  TypeOfUser.taxi.rawValue])
     }
     
     socket.on("connection-aproved", callback: {data, ack in
-      if let array = data as? [JSON], let json = array.first, let message = json["message"].string{
-        Session.sharedInstance.messageToUser = message
-        Session.sharedInstance.connectionStatus = .connected
+      let array = JSON(arrayLiteral: data)
+      Session.sharedInstance.setTaxisWith(JSON: array[0][0].arrayValue)
+      Session.sharedInstance.connectionStatus = .connected
+      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        self.socket.emit("token-Registration", ["type":  TypeOfUser.taxi.rawValue])
       }
     })
     
@@ -39,17 +42,20 @@ class SocketClient{
     
     socket.connect()
   }
-  
   func executeDisconnection(){
     socket.emit("disconnect", ["id":  "im out!"])
   }
   
-  func sendMyLocation(){
-    if Session.sharedInstance.isAllowToSendCurrentLocation{
-      
-      
-    }
+  func sendMyGPSLocationWith(Lat lat: String, Long long: String, AndId id: String){
+    socket.emit("myTaxiLocation", ["lat":  lat, "long": long, "id": id])
   }
+  
+//  func sendMyLocation(){
+//    if Session.sharedInstance.isAllowToSendCurrentLocation{
+//
+//
+//    }
+//  }
   
   
   

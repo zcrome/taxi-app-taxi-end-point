@@ -35,7 +35,7 @@ class Services{
       print(JSON(data: data))
       print("******************************************")
       Session.sharedInstance.taxi = Taxi(TaxiJSON: JSON(data: data))
-      callback(Session.sharedInstance.setTokenWith(JSON: JSON(data: data)))
+      callback(Session.sharedInstance.setTokenWith(JSON: JSON(data: data)) && Session.sharedInstance.setIdWith(JSON: JSON(data: data)))
     }
   }
   

@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		49840B9AF364089E5AC56A93 /* Pods_taxi_app_taxi_end_point.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25712CA63EC9FF230773AFDF /* Pods_taxi_app_taxi_end_point.framework */; };
+		D209E9471F9FCC5000F838B9 /* TaxiOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209E9461F9FCC5000F838B9 /* TaxiOnline.swift */; };
 		D217CBA21F94006100BBBE82 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217CBA11F94006100BBBE82 /* Services.swift */; };
+		D2424F4B1F9FBBAC00015601 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2424F4A1F9FBBAC00015601 /* ShowAlert.swift */; };
+		D2424F4F1F9FC09D00015601 /* TaxisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2424F4E1F9FC09D00015601 /* TaxisViewController.swift */; };
+		D2424F511F9FC0C500015601 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2424F501F9FC0C500015601 /* ConfigurationViewController.swift */; };
+		D2424F531F9FC0DD00015601 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2424F521F9FC0DD00015601 /* ClientsViewController.swift */; };
+		D2424F551F9FC0F900015601 /* CurrentTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2424F541F9FC0F900015601 /* CurrentTripViewController.swift */; };
 		D290C03A1F92C039002BEEB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290C0391F92C039002BEEB6 /* AppDelegate.swift */; };
 		D290C0411F92C039002BEEB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D290C0401F92C039002BEEB6 /* Assets.xcassets */; };
 		D290C0701F92C581002BEEB6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290C06C1F92C327002BEEB6 /* Login.storyboard */; };
@@ -30,7 +36,13 @@
 		25712CA63EC9FF230773AFDF /* Pods_taxi_app_taxi_end_point.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_taxi_app_taxi_end_point.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C8E161E5C4A4EA5DEF482B /* Pods-taxi-app-taxi-end-point.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taxi-app-taxi-end-point.release.xcconfig"; path = "Pods/Target Support Files/Pods-taxi-app-taxi-end-point/Pods-taxi-app-taxi-end-point.release.xcconfig"; sourceTree = "<group>"; };
 		AEEBD02B86846543F8654E2F /* Pods-taxi-app-taxi-end-point.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taxi-app-taxi-end-point.debug.xcconfig"; path = "Pods/Target Support Files/Pods-taxi-app-taxi-end-point/Pods-taxi-app-taxi-end-point.debug.xcconfig"; sourceTree = "<group>"; };
+		D209E9461F9FCC5000F838B9 /* TaxiOnline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiOnline.swift; sourceTree = "<group>"; };
 		D217CBA11F94006100BBBE82 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		D2424F4A1F9FBBAC00015601 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		D2424F4E1F9FC09D00015601 /* TaxisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxisViewController.swift; sourceTree = "<group>"; };
+		D2424F501F9FC0C500015601 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		D2424F521F9FC0DD00015601 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
+		D2424F541F9FC0F900015601 /* CurrentTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTripViewController.swift; sourceTree = "<group>"; };
 		D290C0361F92C039002BEEB6 /* taxi-app-taxi-end-point.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "taxi-app-taxi-end-point.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D290C0391F92C039002BEEB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D290C0401F92C039002BEEB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,8 +109,17 @@
 				D2B865B61F9425C700A2A7F2 /* Session.swift */,
 				D2B865B81F9425E800A2A7F2 /* Taxi.swift */,
 				D2E56ED01F9D700D007A2598 /* ConnectionStatus.swift */,
+				D209E9461F9FCC5000F838B9 /* TaxiOnline.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D2424F491F9FBB8900015601 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D2424F4A1F9FBBAC00015601 /* ShowAlert.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D290C02D1F92C039002BEEB6 = {
@@ -122,6 +143,7 @@
 		D290C0381F92C039002BEEB6 /* taxi-app-taxi-end-point */ = {
 			isa = PBXGroup;
 			children = (
+				D2424F491F9FBB8900015601 /* Extension */,
 				D217CBA01F93FF5800BBBE82 /* Model */,
 				D217CB9F1F93FF4600BBBE82 /* Network */,
 				D290C0621F92C327002BEEB6 /* Controllers */,
@@ -147,6 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				D290C0641F92C327002BEEB6 /* HomeViewController.swift */,
+				D2424F4E1F9FC09D00015601 /* TaxisViewController.swift */,
+				D2424F501F9FC0C500015601 /* ConfigurationViewController.swift */,
+				D2424F521F9FC0DD00015601 /* ClientsViewController.swift */,
+				D2424F541F9FC0F900015601 /* CurrentTripViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -307,11 +333,17 @@
 				D2E56ED11F9D700D007A2598 /* ConnectionStatus.swift in Sources */,
 				D2B865B31F94060600A2A7F2 /* HomeViewController.swift in Sources */,
 				D2B865B51F94083700A2A7F2 /* TypeOfUser.swift in Sources */,
+				D2424F511F9FC0C500015601 /* ConfigurationViewController.swift in Sources */,
+				D2424F4F1F9FC09D00015601 /* TaxisViewController.swift in Sources */,
+				D209E9471F9FCC5000F838B9 /* TaxiOnline.swift in Sources */,
+				D2424F551F9FC0F900015601 /* CurrentTripViewController.swift in Sources */,
 				D2B865B91F9425E800A2A7F2 /* Taxi.swift in Sources */,
 				D2B865B11F9405FE00A2A7F2 /* LoginViewController.swift in Sources */,
 				D2E56ECF1F9C13B0007A2598 /* SocketClient.swift in Sources */,
+				D2424F531F9FC0DD00015601 /* ClientsViewController.swift in Sources */,
 				D290C03A1F92C039002BEEB6 /* AppDelegate.swift in Sources */,
 				D217CBA21F94006100BBBE82 /* Services.swift in Sources */,
+				D2424F4B1F9FBBAC00015601 /* ShowAlert.swift in Sources */,
 				D2B865B21F94060200A2A7F2 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,6 +28,8 @@ class HomeViewController: UITabBarController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    SocketClient.share.executeConnection()
   }
   
   override func viewWillAppear(_ animated: Bool) {
