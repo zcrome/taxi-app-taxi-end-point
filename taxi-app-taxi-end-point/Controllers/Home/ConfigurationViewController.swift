@@ -10,6 +10,12 @@ import UIKit
 
 class ConfigurationViewController: UIViewController {
 
+    
+    @IBOutlet var latitudeTextField: UITextField!
+    @IBOutlet var longTextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +27,67 @@ class ConfigurationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func goToLogin(_ sender: Any) {
+        
+        performSegue(withIdentifier: "goToLogin", sender: nil)
+        
+        SocketClient.share.executeDisconnection()
     }
-    */
-
+    
+    
+    @IBAction func activateManualCoord(_ sender: UISwitch) {
+        
+        if sender.isOn{
+            Session.sharedInstance.isAutomaticCoordinates = false
+            Session.sharedInstance.latitude = latitudeTextField.text!
+            Session.sharedInstance.longitude = longTextField.text!
+        }else{
+            Session.sharedInstance.isAutomaticCoordinates = true
+        }
+        
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        latitudeTextField.resignFirstResponder()
+        longTextField.resignFirstResponder()
+    }
+    
 }
+
+extension ConfigurationViewController: UITextFieldDelegate{
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        if Session.sharedInstance.isAutomaticCoordinates == false{
+            if textField == latitudeTextField{
+                Session.sharedInstance.latitude = textField.text!
+            }
+            if textField == longTextField{
+                Session.sharedInstance.longitude = textField.text!
+            }
+        }
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

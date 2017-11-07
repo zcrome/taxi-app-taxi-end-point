@@ -17,6 +17,11 @@ class Session{
   var taxi: Taxi?
   var token: String?
   var id: String?
+    
+    var latitude = ""
+    var longitude = ""
+    var isAutomaticCoordinates = true
+    
   var connectionStatus: ConnectionStatus = .disconnected{
     didSet{
       if let label = connectionStatusLabel{
@@ -31,8 +36,8 @@ class Session{
   var currentCountTaxisOnline: UILabel?
   var currentTaxisOnline: [TaxiOnline]?{
     didSet{
-      if let countTaxisLabel = currentCountTaxisOnline{
-        countTaxisLabel.text = "\(currentTaxisOnline?.count)"
+      if let countTaxisLabel = currentCountTaxisOnline, let taxisOnline = currentTaxisOnline?.count{
+        countTaxisLabel.text = "\(taxisOnline)"
       }
     }
   }

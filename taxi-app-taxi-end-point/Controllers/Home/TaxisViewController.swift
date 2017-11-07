@@ -84,9 +84,17 @@ class TaxisViewController: UIViewController {
 
 extension TaxisViewController: CLLocationManagerDelegate{
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-    currentCoordinatesLabel.text = "Lat: \(locValue.latitude) Long: \(locValue.longitude)"
-    SocketClient.share.sendMyGPSLocationWith(Lat: "\(locValue.latitude)", Long: "\(locValue.longitude)", AndId: Session.sharedInstance.id!)
+    
+    if let id = Session.sharedInstance.id{
+        if Session.sharedInstance.isAutomaticCoordinates{
+            let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+            currentCoordinatesLabel.text = "Lat: \(locValue.latitude) Long: \(locValue.longitude)"
+            SocketClient.share.sendMyGPSLocationWith(Lat: "\(locValue.latitude)", Long: "\(locValue.longitude)", AndId: id)
+        }else{
+            currentCoordinatesLabel.text = "Lat: \(Session.sharedInstance.latitude) Long: \(Session.sharedInstance.longitude)"
+            SocketClient.share.sendMyGPSLocationWith(Lat: Session.sharedInstance.latitude, Long: Session.sharedInstance.longitude, AndId: id)
+        }
+    }
   }
 }
 

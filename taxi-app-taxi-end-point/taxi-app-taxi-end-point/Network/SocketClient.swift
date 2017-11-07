@@ -34,16 +34,15 @@ class SocketClient{
       }
     })
     
-    socket.on("out") {data, ack in
-      print("SOCKET DISCONECTED!!!")
-      print(data)
-      self.socket.disconnect()
-    }
-    
     socket.connect()
   }
   func executeDisconnection(){
-    socket.emit("disconnect", ["id":  "im out!"])
+    if let id = Session.sharedInstance.id{
+        print(id)
+        socket.emit("disconnect", ["id": id])
+        self.socket.disconnect()
+        Session.sharedInstance.executeLogout()
+    }
   }
   
   func sendMyGPSLocationWith(Lat lat: String, Long long: String, AndId id: String){
